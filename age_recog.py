@@ -5,7 +5,7 @@ from tensorflow import keras
 from mtcnn import MTCNN
 
 # Load the FaceNet model for face recognition
-facenet = keras.models.load_model("path/to/your/facenet/model.h5")
+facenet = keras.models.load_model("C:\\Users\\HP\\Desktop\\facial_recog\\facenet\\model.h5")
 
 # Load the Haar Cascade Classifiers for face, eyes, and mouth detection
 face_cascade = cv2.CascadeClassifier("C:/Users/HP/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/cv2/data/haarcascade_frontalface_default.xml")
