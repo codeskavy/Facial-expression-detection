@@ -8,9 +8,9 @@ from mtcnn import MTCNN
 facenet = keras.models.load_model("path/to/your/facenet/model.h5")
 
 # Load the Haar Cascade Classifiers for face, eyes, and mouth detection
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
-mouth_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smile.xml')
+face_cascade = cv2.CascadeClassifier("C:/Users/HP/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/cv2/data/haarcascade_frontalface_default.xml")
+eye_cascade = cv2.CascadeClassifier("C:/Users/HP/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/cv2/data/haarcascade_eye.xml")
+mouth_cascade = cv2.CascadeClassifier("C:/Users/HP/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/cv2/data/haarcascade_smile.xml")
 
 # Load the age model (you'll need to add the path to your age estimation model)
 age_model = keras.models.load_model("path/to/age_model.h5")
@@ -65,7 +65,7 @@ while True:
         for (mx, my, mw, mh) in mouths:
             cv2.rectangle(roi_color, (mx, my), (mx + mw, my + mh), (255, 0, 0), 2)
 
-    # Show the frame with face, eyes, and mouth detection
+    # Show the frame with face, eyes, mouth, and age detection
     cv2.imshow("Face, Eyes, Mouth, and Age Detection", frame)
 
     # Press 'q' key to exit the loop
