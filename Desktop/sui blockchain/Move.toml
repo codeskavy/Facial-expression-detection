@@ -1,0 +1,10 @@
+[package]
+name = "dns_project"
+version = "0.0.1"
+edition = "2024.beta"  # Use the latest stable Move language edition
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[addresses]
+dns_project = "0x0"  # Replace with your Sui wallet address before publishing
